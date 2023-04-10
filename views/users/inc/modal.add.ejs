@@ -1,0 +1,64 @@
+<div class="modal fade" id="ModalUser" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">ADD USER</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <form method="post">
+          <input name="type" value="add" type="hidden">
+
+          <div class="modal-body">
+            <div class="row mx-auto py-1 bg-warning-subtle">
+
+              <div class="mb-3">
+                <label for="exampleInputUsername" class="form-label">
+                  Username
+                </label>
+                <input type="text" name="username" class="form-control" id="exampleInputUsername" />
+              </div>
+
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">
+                  Password
+                </label>
+                <input type="password" name="pass" class="form-control" id="exampleInputPassword" />
+              </div>
+
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">
+                  Email
+                </label>
+                <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+              </div>
+
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">
+                  Vai trò
+                </label>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="role" value="admin" id="flexRadioDefault1" />
+                  <label class="form-check-label" for="flexRadioDefault1">
+                    Admin
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="role" value="user" id="flexRadioDefault2" checked />
+                  <label class="form-check-label" for="flexRadioDefault2">
+                    Users
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary">Save</button>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </div>

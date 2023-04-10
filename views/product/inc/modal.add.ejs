@@ -1,0 +1,50 @@
+<div class="modal fade" id="ModalProduct" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">ADD PRODUCT</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <form method="post"  >
+          <input name="type" value="add" type="hidden">
+          <div class="modal-body">
+            <div class="row mx-auto py-1 bg-warning-subtle">
+
+              <div class="mb-3">
+                <label for="exampleInputUsername" class="form-label">Tên</label>
+                <input type="text" name="name" class="form-control" id="exampleInputUsername" />
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Giá</label>
+                <input type="number" name="price" class="form-control" id="exampleInputPassword1" />
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Mô tả</label>
+                <textarea name="desc" class="form-control" id="exampleInputPassword1" cols="30" rows="10"></textarea> <br>
+              </div>
+              <div class="input-group mb-3">
+                <label class="input-group-text" for="inputGroupSelect01">Thể loại</label>
+                <select name="cat" class="form-select" id="inputGroupSelect01">
+                  <% listCat.forEach( (row)=> { %>
+                  <option value="<%= row._id %>">
+                    <%= row.name %>
+                  </option>
+                  <% }) %>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="formFileSm" class="form-label">Ảnh</label>
+                <input type="file" name="img" class="form-control form-control-sm">
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary">Save</button>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </div>
